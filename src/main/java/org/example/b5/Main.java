@@ -64,18 +64,23 @@ public class Main {
         try (Connection conn = DriverManager.getConnection(url, user, password);
              PreparedStatement ps = conn.prepareStatement(sql)
         ) {
-            System.out.print("code: ");
+            System.out.print("Nhập mã bệnh nhân: ");
             String code = sc.nextLine();
-            System.out.print("name: ");
+
+            System.out.print("Nhập tên bệnh nhân: ");
             String name = sc.nextLine();
-            System.out.print("age: ");
+
+            System.out.print("Nhập tuổi: ");
             int age = sc.nextInt();
             sc.nextLine();
-            System.out.print("department: ");
+
+            System.out.print("Nhập khoa điều trị: ");
             String dept = sc.nextLine();
-            System.out.print("disease: ");
+
+            System.out.print("Nhập bệnh lý: ");
             String disease = sc.nextLine();
-            System.out.print("days: ");
+
+            System.out.print("Nhập số ngày nhập viện: ");
             int days = sc.nextInt();
             sc.nextLine();
             ps.setString(1, code);
